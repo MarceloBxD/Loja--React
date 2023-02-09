@@ -2,20 +2,17 @@ import React, { useState } from "react";
 import { Flex, Text } from "@chakra-ui/react";
 import { AsideItem } from "../AsideItem";
 import { VscMenu } from "react-icons/vsc";
+import { useApp } from "../../contexts/context";
 
 export const Aside = () => {
-  const [isOpen, setIsOpen] = useState(true);
-
-  const handleCloseAside = () => {
-    setIsOpen(!isOpen);
-  };
+  const { isOpen, setIsOpen, handleCloseAside } = useApp();
 
   return (
     <>
       <Flex
         w="15%"
         bgColor="#000"
-        p="15px"
+        p="10px"
         position="fixed"
         flexDir="column"
         left="0"
@@ -28,6 +25,9 @@ export const Aside = () => {
       >
         <Flex justify="space-between">
           <VscMenu
+            position="fixed"
+            top="10px"
+            left="10px"
             onClick={() => handleCloseAside()}
             cursor="pointer"
             size="30px"

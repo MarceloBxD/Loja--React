@@ -6,7 +6,7 @@ export const AsideItem = ({ children }) => {
     <Flex
       w="95%"
       borderRadius="10px"
-      p="5px"
+      p="8px"
       cursor="pointer"
       _hover={{ bgColor: "#ccc", color: "#000" }}
       bgColor="#bbb"
