@@ -5,6 +5,7 @@ import { ProductCard } from "../../components/ProductCard";
 import { Aside } from "../../components/Aside";
 import { useApp } from "../../contexts/context";
 import { FaShoppingCart } from "react-icons/fa";
+import { IoIosAddCircleOutline } from "react-icons/io";
 
 export const Market = () => {
   const { isOpen, setIsOpen, products } = useApp();
@@ -14,18 +15,40 @@ export const Market = () => {
       w="100%"
       p="10px"
       justify="center"
+      bgColor="#ccc"
       align="center"
       h="100%"
-      bgColor="#ccc"
     >
+      <Button
+        variant="unstyled"
+        position="fixed"
+        top="10px"
+        left="10px"
+        title="Menu"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <VscMenu color="#000" size="30" />
+      </Button>
+      {isOpen && <Aside />}
       <Flex flexWrap="wrap" m="20px" gap="25px">
-        {products.map((product, index) => (
-          <ProductCard
-            key={index}
-            title={product.title}
-            description={product.description}
-            image={product.image}
-          />
+        {products.map((product) => (
+          <Flex flexDir="column" m="45px">
+            <ProductCard
+              key={product.title}
+              title={product.title}
+              description={product.description}
+              image={product.image}
+            />
+            <Button
+              w="fit-content"
+              position="relative"
+              variant="unstyled"
+              top="10px"
+              justifySelf="center"
+            >
+              <IoIosAddCircleOutline color="#fff" size="40" />
+            </Button>
+          </Flex>
         ))}
       </Flex>
       <Button
@@ -35,7 +58,7 @@ export const Market = () => {
         right="10px"
         title="Carrinho"
       >
-        <FaShoppingCart size="20" />
+        <FaShoppingCart color="#000" size="20" />
       </Button>
     </Flex>
   );

@@ -13,6 +13,7 @@ export const Aside = () => {
         w="20%"
         bgColor="#000"
         p="10px"
+        zIndex="999"
         position="fixed"
         flexDir="column"
         left="0"

@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 export const AsideItem = ({ children }) => {
   return (
     <motion.div
+      whileHover={{ scale: 1.1 }}
+      transition={{ duration: 0.1 }}
       style={{
         width: "95%",
         borderRadius: "10px",

@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 export const ProductCard = ({ title, descripion, image }) => {
   return (
     <motion.div
+      whileHover={{ scale: 1.1, cursor: "pointer" }}
+      transition={{ duration: 0.2 }}
       style={{
         display: "flex",
         backgroundColor: "red",
@@ -16,7 +18,6 @@ export const ProductCard = ({ title, descripion, image }) => {
       }}
     >
       <Text
-        p="10px"
         borderRadius="10px"
         textAlign="center"
         fontWeight="bold"
@@ -28,13 +29,10 @@ export const ProductCard = ({ title, descripion, image }) => {
         {descripion}
       </Text>
       <Img
-        mb="15px"
         objectFit="cover"
         backgroundPosition="center"
         backgroundRepeat="no-repeat"
         backgroundSize="cover"
-        w="100%"
-        h="100%"
         src={image}
       />
     </motion.div>
