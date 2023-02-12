@@ -1,13 +1,11 @@
 import React from "react";
 import { Flex } from "@chakra-ui/react";
-import "./App.css";
-import { Aside } from "./components/Aside";
 import { Market } from "./sections/Market";
+import "./App.css";
 
 function App() {
   return (
     <Flex>
-      <Aside />
       <Market />
     </Flex>
   );

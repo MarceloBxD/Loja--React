@@ -1,31 +1,42 @@
 import React from "react";
-import { Button, Flex, Text } from "@chakra-ui/react";
-import { useApp } from "../../contexts/context";
+import { Button, Flex, Img, Text } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
-export const ProductCard = () => {
+export const ProductCard = ({ title, descripion, image }) => {
   return (
-    <Flex
-      w="230px"
-      p="7px"
-      borderRadius="8px"
-      flexDir="column"
-      h="270px"
-      bgColor="#fff"
+    <motion.div
+      style={{
+        display: "flex",
+        backgroundColor: "red",
+        flexDirection: "column",
+        justifyContent: "center",
+        width: "230px",
+        height: "300px",
+        borderRadius: "8px",
+      }}
     >
-      <Text textAlign="center" fontWeight="bold" color="#000">
-        Aqui virá o produto
-      </Text>
-      <Button
-        alignSelf="center"
-        mt="auto"
-        w="fit-content"
-        bgColor="orange"
-        _hover={{ bgColor: "#fff", color: "#000" }}
-        color="#fff"
-        variant="ghost"
+      <Text
+        p="10px"
+        borderRadius="10px"
+        textAlign="center"
+        fontWeight="bold"
+        color="#000"
       >
-        Comprar
-      </Button>
-    </Flex>
+        {title}
+      </Text>
+      <Text textAlign="center" fontWeight="300" color="#000">
+        {descripion}
+      </Text>
+      <Img
+        mb="15px"
+        objectFit="cover"
+        backgroundPosition="center"
+        backgroundRepeat="no-repeat"
+        backgroundSize="cover"
+        w="100%"
+        h="100%"
+        src={image}
+      />
+    </motion.div>
   );
 };

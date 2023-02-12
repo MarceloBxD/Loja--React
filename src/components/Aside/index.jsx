@@ -10,7 +10,7 @@ export const Aside = () => {
   return (
     <>
       <Flex
-        w="15%"
+        w="20%"
         bgColor="#000"
         p="10px"
         position="fixed"

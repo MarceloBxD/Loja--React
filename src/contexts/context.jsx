@@ -11,24 +11,66 @@ const AppContext = createContext();
 export function AppProvider({ children }) {
   const [isOpen, setIsOpen] = useState(true);
 
-  const produtos = [
+  const products = [
     {
-      id: 1,
-      name: "Produto 1",
-      price: "R$ 1000,00",
-      description: "Descrição do produto 1",
+      title: "Product 1",
+      description: "Description 1",
+      image: "https://picsum.photos/200/300",
     },
     {
-      id: 2,
-      name: "Produto 2",
-      price: "R$ 1200,00",
-      description: "Descrição do produto 2",
+      title: "Product 2",
+      description: "Description 2",
+      image: "https://picsum.photos/200/300",
     },
     {
-      id: 3,
-      name: "Produto 3",
-      price: "R$ 1500,00",
-      description: "Descrição do produto 3",
+      title: "Product 2",
+      description: "Description 2",
+      image: "https://picsum.photos/200/300",
+    },
+    {
+      title: "Product 2",
+      description: "Description 2",
+      image: "https://picsum.photos/200/300",
+    },
+    {
+      title: "Product 2",
+      description: "Description 2",
+      image: "https://picsum.photos/200/300",
+    },
+    {
+      title: "Product 2",
+      description: "Description 2",
+      image: "https://picsum.photos/200/300",
+    },
+    {
+      title: "Product 2",
+      description: "Description 2",
+      image: "https://picsum.photos/200/300",
+    },
+    {
+      title: "Product 2",
+      description: "Description 2",
+      image: "https://picsum.photos/200/300",
+    },
+    {
+      title: "Product 2",
+      description: "Description 2",
+      image: "https://picsum.photos/200/300",
+    },
+    {
+      title: "Product 2",
+      description: "Description 2",
+      image: "https://picsum.photos/200/300",
+    },
+    {
+      title: "Product 2",
+      description: "Description 2",
+      image: "https://picsum.photos/200/300",
+    },
+    {
+      title: "Product 2",
+      description: "Description 2",
+      image: "https://picsum.photos/200/300",
     },
   ];
 
@@ -40,7 +82,7 @@ export function AppProvider({ children }) {
     isOpen,
     setIsOpen,
     handleCloseAside,
-    produtos,
+    products,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
